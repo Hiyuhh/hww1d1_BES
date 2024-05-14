@@ -1,0 +1,58 @@
+-------------------------------------------
+Optimizing Text Messaging App with Efficient Data Structures
+-------------------------------------------
+
+Task 1: Message Storage and Retrieval:
+
+Arrays: Arrays can be used to store messages in the order they were recieved.
+
+Linked Lists: Linked lists can efficiently support insertion and deletion of messages at any position.
+
+Hash Tables: Hash tables can provide fast message retrieval by using a hash function to map message IDs to their corresponding messages.
+
+Trees: Trees can be used to efficiently store and retrieve messages based on their timestamps or other attributes.(most suitable choice for a text messaging app.)
+
+Task 2: Real-Time Updates:
+
+Polling: Polling involves the client periodically sending requests to the server to check for updates. 
+
+Long-Polling: Long-polling keeps the connection open until new data is available, reducing latency compared to regular polling.
+
+Websockets: WebSocket is a communication protocol that provides full-duplex communication channels over a single, long-lived connection. Allowing real-time updates to be pushed from the server to the client without continuous polling.(most suitable choice for a text messaging app.)
+
+Task 3: Conversation List Management:
+
+Sorting: Implement sorting algorithms based on timestamp or conversation metadata to display conversations in a meaningful order.
+
+Filtering: Use filters to allow users to view conversations based on specific criteria.
+
+Indexing: Maintain indexes for conversations to speed up retrieval.
+
+-------------------------------------------
+Analyzing Big O Complexity for a Sorting Algorithm
+-------------------------------------------
+
+def simple_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+Task 1: Identifying Key Operations
+
+Initializing a variable (n) with the length of the input array
+Outer loop: Iterating (n) times
+Inner loop: Iterating (n-i-1) times in each iteration of the outer loop
+Comparing adjacent elements and swapping them if they are in the wrong order
+
+Task 2: Calculating Big O Complexity
+the Big O complexity of the provided sorting algorithm is O(n**2), where n is the size of the input array.
+
+Task 3: Efficiency Analysis:
+
+Merge Sort: Merge Sort is a divide-and-conquer algorithm that works well for large datasets.
+
+Quick Sort: Quick sort is another divide-and-conquer algorithm that has an average time complexity
+
+Heap Sort: Heap sort is an in-place sorting algorithm, it guarantees efficient performance for sorting tasks.
